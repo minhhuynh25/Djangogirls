@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 import os
 import sys
 
-path = os.path.expanduser('~/Djangogirls')
+path = os.path.expanduser('~/djangogirls')
 if path not in sys.path:
     sys.path.append(path)
 
