@@ -6,13 +6,19 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        <link rel="stylesheet" href="{% static 'medium-editor-master/dist/css/medium-editor.css' %}">
+        <link rel="stylesheet" href="{% static 'medium-editor-master/dist/css/themes/default.css' %}">
+        <script src="{% static 'medium-editor-master/dist/js/medium-editor.js' %}"></script>
+        <script src="{% static 'medium-editor-master/dist/js/me-markdown.standalone.min.js' %}"></script>
+
     </head>
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1><a href="/">Blog</a></h1>
         </div>
         <div class="content container">
             <div class="row">
@@ -22,5 +28,21 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var editor = new MediumEditor('.editable');
+        </script>
+<!--         <script>
+            (function () {
+                var markDownEl = document.querySelector(".markdown");
+                new MediumEditor(document.querySelector(".editor"), {
+                    extensions: {
+                        markdown: new MeMarkdown(function (md) {
+                            markDownEl.textContent = md;
+                        })
+                    }
+                });
+            })();
+        </script> -->
     </body>
 </html>
