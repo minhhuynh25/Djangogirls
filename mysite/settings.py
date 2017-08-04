@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'ckeditor',
     
 ]
 
@@ -122,8 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
